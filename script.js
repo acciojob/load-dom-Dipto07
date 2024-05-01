@@ -1,9 +1,14 @@
+
 //your JS code here. If required.
 document.addEventListener("DOMContentLoaded", function() {
 
-	var paragraph = document.createElement("p");
+	var body = document.querySelector("body");
 
-	paragraph.textContent = "DOM load success";
+  if (body.hasChildNodes()) {
+    body.innerHTML = "";
+  }
 
-	document.body.appendChild(paragraph);
+  var textNode = document.createTextNode("DOM load success");
+
+  body.appendChild(textNode);
 });
